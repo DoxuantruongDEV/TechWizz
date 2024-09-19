@@ -139,7 +139,11 @@
                         </a>
                         <ul class="sub-nav collapse" id="sidebar-special" data-bs-parent="#sidebar-menu">
                             <li class="nav-item">
+<<<<<<< HEAD
                                 <a class="nav-link {{ request()->routeIs('admin.touradmin') ? 'active' : '' }} " href="{{Route('admin.touradmin')}}">
+=======
+                                <a class="nav-link  " href="../dashboard/special-pages/billing.html">
+>>>>>>> 7b075d4fa73b21dab7553060053ddb70b58228a8
                                   <i class="icon">
                                         <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                             <g>
@@ -324,7 +328,11 @@
                         </a>
                         <ul class="sub-nav collapse" id="sidebar-user" data-bs-parent="#sidebar-menu">
                             <li class="nav-item">
+<<<<<<< HEAD
                                 <a class="nav-link {{ request()->routeIs('admin.userprofile') ? 'active' : '' }}  " href="{{Route('admin.userprofile')}}">
+=======
+                                <a class="nav-link  " href="../dashboard/app/user-profile.html">
+>>>>>>> 7b075d4fa73b21dab7553060053ddb70b58228a8
                                     <i class="icon">
                                         <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                             <g>
@@ -337,7 +345,11 @@
                                 </a>
                             </li>
                             <li class="nav-item">
+<<<<<<< HEAD
                                 <a class="nav-link {{ request()->routeIs('admin.useradd') ? 'active' : '' }}  " href="{{Route('admin.useradd')}}">
+=======
+                                <a class="nav-link  " href="../dashboard/app/user-add.html">
+>>>>>>> 7b075d4fa73b21dab7553060053ddb70b58228a8
                                     <i class="icon">
                                         <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
                                             <g>
