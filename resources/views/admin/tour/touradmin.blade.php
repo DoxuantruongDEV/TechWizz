@@ -53,7 +53,7 @@
                             <span class="dropdown-toggle align-items-center d-flex" id="dropdownMenuButton04" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Sort By:
                             </span>
-                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton04" style="">
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton04" >
                                 <a class="dropdown-item" href="#">Status</a>
                                 <a class="dropdown-item" href="#">Task Name</a>
                                 <a class="dropdown-item" href="#">Priority</a> 

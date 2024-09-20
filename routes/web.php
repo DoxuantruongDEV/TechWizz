@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CurrencyController;
+use App\Http\Controllers\UserController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,24 +27,17 @@ Route::prefix('admin')->group(function () {
         return view('admin/layout/layout');
     })->name('admin.home');
 //  ADMIN.USER
-       Route::prefix('/user')->group(function () {
-           Route::get('/', function () {
-                   return view('admin/User/userlist');
-          })->name('admin.user');
+Route::resource('user', UserController::class)->names([
+    'index' => 'admin.user',
+    'create' => 'admin.user.create',
+    'store' => 'admin.user.store',
+    'show' => 'admin.user.show',
+   
+    'update' => 'admin.user.update',
+    'destroy' => 'admin.user.destroy',
+]);
 
-          Route::get('/add', function () {
-            return view('admin/User/useradd');
-         })->name('admin.useradd');
-
-       Route::get('/edit', function ($id = 1) {
-         return view('admin/User/useredit', ['id' => $id]);
-            })->name('admin.useredit');
-
-       Route::get('/profile', function ($id = 1) {
-        return view('admin/User/userprofile', ['id' => $id]);
-            })->name('admin.userprofile');
-            });
-
+   
       //  ADMIN.USER
       Route::prefix('/Destinations')->group(function () {
         Route::get('/tour', function () {
@@ -58,5 +54,7 @@ Route::prefix('admin')->group(function () {
         
 
 });
+
+
 
 

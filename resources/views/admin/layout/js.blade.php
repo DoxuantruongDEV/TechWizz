@@ -44,6 +44,23 @@
         });
     });
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const uploadInput = document.getElementById('avatar_url');
+        const profilePicPreview = document.getElementById('profile-pic-preview');
+
+        uploadInput.addEventListener('change', function() {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    profilePicPreview.src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    });
+</script>
 
   </body>
 </html>
