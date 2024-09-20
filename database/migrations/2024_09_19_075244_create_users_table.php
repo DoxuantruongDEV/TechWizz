@@ -15,7 +15,7 @@ return new class extends Migration
             $table->increments('user_id');
             $table->string('first_name', 50);
             $table->string('last_name', 50);
-            $table->string('e_mail', 50)->unique();
+            $table->string('email', 50)->unique();
             $table->integer('phone')->nullable();
             $table->string('password', 30);
             $table->string('avatar_url', 50)->nullable();
