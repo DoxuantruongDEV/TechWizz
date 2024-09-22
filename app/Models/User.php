@@ -16,6 +16,8 @@ class User extends Authenticatable
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
+     * 
+     * 
      */
     protected $fillable = [
         'first_name',
@@ -26,7 +28,30 @@ class User extends Authenticatable
         'avatar_url',
         'preferred_currency',
         'travel_hobby',
-        'role',
+        'role'
     ];
+
+    public function hasRole($role)
+    {
+        return $this->role === $role;
+    }
+
+    /**
+     * The attributes that should be hidden for serialization.
+     *
+     * @var array<int, string>
+     */
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
+   
+
 
 }

@@ -15,11 +15,9 @@ use App\Http\Controllers\UserController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', function () {
+Route::get('/index', function (){
     return view('index');
-})->name('home');
-
-
+})->name('user');
 
 Route::get('/currency', [CurrencyController::class, 'showForm']);
 Route::post('/currency', [CurrencyController::class, 'convert']);
@@ -55,13 +53,6 @@ Route::delete('/admin/user/{id}', [UserController::class, 'destroy'])->name('adm
         
 
 });
-
-
-
-Route::get('/currency', [CurrencyController::class, 'showForm']);
-Route::post('/currency', [CurrencyController::class, 'convert']);
-
-
 
 
 
