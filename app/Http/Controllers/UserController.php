@@ -117,14 +117,19 @@ public function update(Request $request, $id)
 }
 public function destroy($id)
 {
+    Log::info('Attempting to delete user with ID: ' . $id);
+
     try {
         $user = User::findOrFail($id);
         $user->delete();
-    } catch (\Exception $e) {
-        Log::error('Error deleting user: ' . $e->getMessage());
-        return redirect()->back()->withErrors(['error' => 'There was an error deleting the user.']);
-    }
 
-    return redirect()->route('admin.user');
+        Log::info('User deleted successfully: ', ['id' => $id]);
+
+        return redirect()->route('admin.user.index')->with('success', 'User deleted successfully');
+    } catch (\Exception $e) {
+        Log::error('Failed to delete user: ', ['id' => $id, 'error' => $e->getMessage()]);
+
+        return redirect()->route('admin.user.index')->with('error', 'Failed to delete user');
+    }
 }
 }

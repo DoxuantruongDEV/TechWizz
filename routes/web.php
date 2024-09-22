@@ -36,9 +36,8 @@ Route::resource('user', UserController::class)->names([
     'show' => 'admin.user.show',
    
     'update' => 'admin.user.update',
-    'destroy' => 'admin.user.destroy',
 ]);
-
+Route::delete('/admin/user/{id}', [UserController::class, 'destroy'])->name('admin.user.destroy');
    
       //  ADMIN.USER
       Route::prefix('/Destinations')->group(function () {
